@@ -1,12 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import UserDetailsContainer from './containers/UserDetailsContainer';
+import './index.css'
+import CurrentPageContextProvider from './contexts/CurrentPageProvider';
 
-const HelloWorld = () => {
+const App = () => {
     return (
-        <h1>
-            Hello World
-        </h1>
+        <CurrentPageContextProvider>
+            <UserDetailsContainer />
+        </CurrentPageContextProvider>
     );
 }
 
-ReactDOM.render(<HelloWorld />, document.getElementById("root"));
+ReactDOM.render(<App />, document.getElementById("root"));

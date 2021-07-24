@@ -28,7 +28,7 @@ const joiSchema = Joi.object({
         state: Joi.string().required(),
         pincode: Joi.string().regex(/^\d{6}$/).required()
     }).required(),
-    gender: Joi.string().valid('male', 'female').required(),
+    gender: Joi.string().valid('male', 'female', 'other').required(),
     designation: Joi.string().max(30),
     interests: Joi.array().items(Joi.string().max(20)).required(),
 });
